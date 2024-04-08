@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct LongPressButton: View {
     @Binding var doubleValue: Double
@@ -80,6 +81,9 @@ struct LongPressButton: View {
             case .increment:
                 newValue = doubleValue + config.increment
         }
+
+        let generator = UIImpactFeedbackGenerator(style: .rigid)
+        generator.impactOccurred()
         
         doubleValue = (config.minimum...config.maximum).contains(newValue.decimal) ? newValue : doubleValue
     }
