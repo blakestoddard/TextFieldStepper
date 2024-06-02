@@ -25,8 +25,13 @@ public struct TextFieldStepper: View {
             keyboardOpened = false
         }) {
             config.declineImage
+                .bold()
+                .padding()
+                .font(.title2)
+                .frame(height: 45)
         }
-        .foregroundColor(config.declineImage.color)
+        .buttonStyle(.bordered)
+        .tint(.red)
     }
     
     private var confirmButton: some View {
@@ -35,8 +40,13 @@ public struct TextFieldStepper: View {
             validateValue()
         }) {
             config.confirmImage
+                .bold()
+                .padding()
+                .font(.title2)
+                .frame(height: 45)
         }
-        .foregroundColor(config.confirmImage.color)
+        .buttonStyle(.bordered)
+        .tint(.green)
     }
     
     private var decrementButton: some View {
