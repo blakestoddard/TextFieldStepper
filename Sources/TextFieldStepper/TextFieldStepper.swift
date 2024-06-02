@@ -122,16 +122,15 @@ public struct TextFieldStepper: View {
                 TextField("", text: $textValue)
                     .focused($keyboardOpened)
                     .multilineTextAlignment(.center)
-                    .font(.largeTitle)
+                    .font(.title)
                     .bold()
                     .monospacedDigit()
                     .keyboardType(.decimalPad)
                     .foregroundColor(config.valueColor)
-                    .monospacedDigit()
                 
                 if !config.label.isEmpty {
                     Text(config.label)
-                        .font(.body)
+                        .font(.subheadline)
                         .foregroundColor(config.labelColor)
                         .opacity(config.labelOpacity)
                 }
