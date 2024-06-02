@@ -155,7 +155,6 @@ public struct TextFieldStepper: View {
                 }
             }
         }
-        .border(.red)
         .onChange(of: keyboardOpened) { _ in
             if keyboardOpened {
                 textValue = textValue.replacingOccurrences(of: config.unit, with: "")
