@@ -17,6 +17,7 @@ public struct TextFieldStepperImage: View {
         image
             .bold()
             .padding()
+            .font(.title)
             .frame(height: 45)
     }
 }
