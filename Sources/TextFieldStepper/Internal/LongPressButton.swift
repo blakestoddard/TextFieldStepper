@@ -26,7 +26,7 @@ struct LongPressButton: View {
             LongPressGesture(minimumDuration: 0.25).onEnded(startTimer)
         )
         .buttonStyle(.bordered)
-        .foregroundColor(disableButton() ? Color.primary : config.disabledColor)
+        //.foregroundColor(disableButton() ? Color.primary : config.disabledColor)
         .tint(image.color)
         .disabled(disableButton())
     }
