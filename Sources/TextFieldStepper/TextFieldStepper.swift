@@ -28,7 +28,7 @@ public struct TextFieldStepper: View {
                 .bold()
                 .padding()
                 .font(.title2)
-                .frame(height: 45)
+                .frame(width: 45, height: 45)
         }
         .buttonStyle(.bordered)
         .tint(.red)
@@ -43,7 +43,7 @@ public struct TextFieldStepper: View {
                 .bold()
                 .padding()
                 .font(.title2)
-                .frame(height: 45)
+                .frame(width: 45, height: 45)
         }
         .buttonStyle(.bordered)
         .tint(.green)
