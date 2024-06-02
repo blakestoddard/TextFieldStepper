@@ -15,6 +15,8 @@ public struct TextFieldStepperImage: View {
     
     public var body: some View {
         image
+            .bold()
+            .padding()
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: 45)
