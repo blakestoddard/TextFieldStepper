@@ -17,6 +17,7 @@ public struct TextFieldStepperConfig {
     var shouldShowAlert: Bool
     var minimumDecimalPlaces: Int
     var maximumDecimalPlaces: Int
+    var disableKeyboard: Bool
 
     public init (
         unit: String = "",
@@ -34,7 +35,8 @@ public struct TextFieldStepperConfig {
         valueColor: Color = .primary,
         shouldShowAlert: Bool = true,
         minimumDecimalPlaces: Int = 0,
-        maximumDecimalPlaces: Int = 8
+        maximumDecimalPlaces: Int = 8,
+        disableKeyboard: Bool = false
     ) {
         self.unit = unit
         self.label = label
@@ -52,5 +54,6 @@ public struct TextFieldStepperConfig {
         self.shouldShowAlert = shouldShowAlert
         self.minimumDecimalPlaces = minimumDecimalPlaces
         self.maximumDecimalPlaces = maximumDecimalPlaces
+        self.disableKeyboard = disableKeyboard
     }
 }

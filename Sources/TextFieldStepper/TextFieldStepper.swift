@@ -88,6 +88,7 @@ public struct TextFieldStepper: View {
         shouldShowAlert: Bool? = nil,
         minimumDecimalPlaces: Int? = nil,
         maximumDecimalPlaces: Int? = nil,
+        disableKeyboard: Bool? = nil,
         config: TextFieldStepperConfig = TextFieldStepperConfig()
     ) {
         // Compose config
@@ -108,6 +109,7 @@ public struct TextFieldStepper: View {
         config.shouldShowAlert = shouldShowAlert ?? config.shouldShowAlert
         config.minimumDecimalPlaces = minimumDecimalPlaces ?? config.minimumDecimalPlaces
         config.maximumDecimalPlaces = maximumDecimalPlaces ?? config.maximumDecimalPlaces
+        config.disableKeyboard = disableKeyboard ?? config.disableKeyboard
         
         // Assign properties
         self._doubleValue = doubleValue
@@ -137,6 +139,7 @@ public struct TextFieldStepper: View {
                     .monospacedDigit()
                     .keyboardType(.decimalPad)
                     .foregroundColor(config.valueColor)
+                    .disabled(config.disableKeyboard)
                 
                 if !config.label.isEmpty {
                     Text(config.label)
